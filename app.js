@@ -9,6 +9,8 @@ app.get('/',(req,res) => {
     const newCount = parseInt(count) + 1
     writeFileSync('./count.txt', parseInt(newCount, 10).toString());
 
+    // if(newCount == 10)
+
     res.send(
 `<!DOCTYPE html>
 <html lang="en">
@@ -20,6 +22,7 @@ app.get('/',(req,res) => {
 </head>
 <body>
 <h1>Welcome User</h1>
+<iframe src="https://giphy.com/embed/3oz9ZE2Oo9zRC" width="480" height="216" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>
 <p>This page has been viewed ${count} times.</p>
 </body>
 </html>`
